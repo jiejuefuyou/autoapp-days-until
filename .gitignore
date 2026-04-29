@@ -32,13 +32,13 @@ Carthage/Build/
 # fastlane
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots/**/*.png
 fastlane/test_output
 fastlane/README.md
 *.p8
 *.p12
 *.mobileprovision
 *.cer
+# fastlane screenshots and the generated icon ARE committed.
 
 # Secrets / env
 .env
@@ -49,5 +49,3 @@ fastlane/README.md
 .vscode/
 .idea/
 
-# Generated icon (re-created by scripts/generate_icons.sh on each CI run)
-DaysUntil/Resources/Assets.xcassets/AppIcon.appiconset/icon.png

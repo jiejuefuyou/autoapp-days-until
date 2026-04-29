@@ -111,6 +111,10 @@ final class EventStore {
     func add(_ event: Event) {
         events.append(event)
         save()
+        Task { @MainActor in
+            ReviewService.recordSuccess()
+            ReviewService.maybeRequestReview()
+        }
     }
 
     func update(_ event: Event) {

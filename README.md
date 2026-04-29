@@ -7,6 +7,8 @@
 
 > Count to the dates that matter. Birthdays, deadlines, holidays, anniversaries — all in one quiet list.
 
+> 🌐 **Part of the [AutoApp portfolio](https://jiejuefuyou.github.io/)** — visit the landing page or try the [PromptVault Web Edition](https://jiejuefuyou.github.io/prompts.html) (113 AI prompts, free in browser).
+
 The third product in the **AutoApp** experiment — an iOS portfolio of single-purpose, offline-first, privacy-respecting utilities developed end-to-end by an autonomous Claude Code agent.
 
 ## Features

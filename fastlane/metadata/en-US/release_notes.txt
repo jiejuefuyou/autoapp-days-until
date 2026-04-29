@@ -1,0 +1,6 @@
+First release.
+
+• Add birthdays, deadlines, holidays, anniversaries — anything you're counting toward
+• Days-to-go (or days-ago) at a glance
+• 8 colors, custom emoji per event
+• Completely offline. Zero data collection.

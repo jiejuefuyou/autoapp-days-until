@@ -1,0 +1,31 @@
+A quiet countdown app for the dates you actually care about.
+
+DaysUntil keeps a small list of events — birthdays, deadlines, holidays, anniversaries, exam dates, vacations — and tells you how many days until each one. That's it. No notifications. No calendar sync. No social feed. Just a glance, on demand.
+
+WHAT IT'S FOR
+• Anna's birthday: 42 days
+• Project deadline: 11 days
+• Wedding anniversary: 88 days
+• "Do I have time for…": one tap to find out
+• Anything where the answer is a single number
+
+DESIGNED TO STAY OUT OF THE WAY
+• Add an event in three taps: title, date, save
+• Pick an emoji and a color
+• Future events sort first; past events live below
+• Swipe to delete; tap to edit
+• That's the whole feature list
+
+PRIVACY-FIRST
+• Completely offline — no network calls, no accounts, no data collection
+• No analytics, no ads, no tracking SDKs
+• Your events stay on your device
+
+PREMIUM (one-time $2.99)
+• Unlimited events (free tier capped at 3)
+• 6 additional colors
+• Custom emoji per event
+
+No subscription. Pay once, keep it forever.
+
+Made for iOS 17 and up.

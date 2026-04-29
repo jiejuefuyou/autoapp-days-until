@@ -1,0 +1,5 @@
+DaysUntil is a fully offline countdown utility. There is no account system, no server, no notifications, no calendar sync. The app is usable immediately on launch with a single seeded "New Year" event.
+
+The single in-app purchase (com.jiejuefuyou.daysuntil.premium, $2.99 one-time non-consumable) unlocks unlimited events, 6 additional colors, and custom emoji per event. The free tier (3 events, 2 colors, default emoji) is fully functional.
+
+No demo credentials needed.

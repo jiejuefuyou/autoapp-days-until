@@ -1,1 +1,1 @@
-countdown,days until,birthday,reminder,date,event,calendar,deadline,anniversary,holiday,exam,planner
+countdown,days until,birthday,date,event,calendar,deadline,anniversary,holiday,exam,planner,wedding

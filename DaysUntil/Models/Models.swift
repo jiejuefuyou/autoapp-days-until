@@ -65,7 +65,11 @@ final class EventStore {
 
     init() {
         load()
-        if events.isEmpty { seed() }
+        if ProcessInfo.processInfo.arguments.contains("-FASTLANE_SNAPSHOT") {
+            seedForSnapshot()
+        } else if events.isEmpty {
+            seed()
+        }
     }
 
     private func seed() {
@@ -73,6 +77,21 @@ final class EventStore {
         let newYear = cal.date(from: DateComponents(year: cal.component(.year, from: .now) + 1, month: 1, day: 1)) ?? .now
         events = [Event(title: "New Year", date: newYear, emoji: "🎉", colorID: "default")]
         save()
+    }
+
+    /// Five events spanning future + past so the App Store screenshot of the list
+    /// shows realistic content. Only used when `-FASTLANE_SNAPSHOT` is in launch args.
+    private func seedForSnapshot() {
+        let cal = Calendar.current
+        func days(_ n: Int) -> Date { cal.date(byAdding: .day, value: n, to: .now)! }
+        events = [
+            Event(title: "Project deadline",  date: days(11),  emoji: "📦",  colorID: "amber"),
+            Event(title: "Anna's birthday",   date: days(28),  emoji: "🎂",  colorID: "rose"),
+            Event(title: "Beach trip",        date: days(67),  emoji: "🏖️", colorID: "ocean"),
+            Event(title: "Anniversary",       date: days(102), emoji: "💍",  colorID: "violet"),
+            Event(title: "Move-in day",       date: days(-5),  emoji: "🏡",  colorID: "forest"),
+        ]
+        // Don't save() — keep the production sandbox file untouched.
     }
 
     /// Past first, today next, future last (chronological with past flipped to most-recent-first).

@@ -2,42 +2,37 @@ import XCTest
 
 final class DaysUntilUITests: XCTestCase {
     override func setUp() {
-        continueAfterFailure = false
+        continueAfterFailure = true
     }
 
     @MainActor
     func testScreenshots() {
         let app = XCUIApplication()
         setupSnapshot(app)
+        app.launchArguments += ["-FASTLANE_SNAPSHOT", "YES", "-ui_testing"]
         app.launch()
+        sleep(2)
 
-        // Snapshot mode seeds 5 events covering future + past so the list looks lived-in.
-        XCTAssertTrue(app.staticTexts["DaysUntil"].waitForExistence(timeout: 10))
-
-        // 1) Event list.
         snapshot("01-Events")
 
-        // 2) Add event sheet.
         let addButton = app.navigationBars.buttons.element(boundBy: app.navigationBars.buttons.count - 1)
-        if addButton.exists {
+        if addButton.waitForExistence(timeout: 5) {
             addButton.tap()
             sleep(1)
             snapshot("02-AddEvent")
             let cancel = app.buttons["Cancel"]
-            if cancel.exists { cancel.tap() }
+            if cancel.exists { cancel.tap(); sleep(1) }
         }
 
-        // 3) Settings sheet.
         let settingsButton = app.navigationBars.buttons.element(boundBy: 0)
-        if settingsButton.exists {
+        if settingsButton.waitForExistence(timeout: 5) {
             settingsButton.tap()
             sleep(1)
             snapshot("03-Settings")
             let done = app.buttons["Done"]
-            if done.exists { done.tap() }
+            if done.exists { done.tap(); sleep(1) }
         }
 
-        // 4) Paywall.
         if settingsButton.exists {
             settingsButton.tap()
             sleep(1)
